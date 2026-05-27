@@ -1,12 +1,12 @@
 # 📊 Excel Dashboard Collection
 
-A curated set of professional **Excel dashboards** built with dark-themed styling, live formulas, and interactive data tables — covering HR analytics, QA engineering, and resource/budget estimation.
+A curated set of professional **Excel dashboards** built with dark-themed styling, live formulas, and interactive data tables — covering HR analytics, QA engineering, project management, and resource/budget estimation.
 
 ---
 
 ## 📁 File Overview
 
-### 🧑‍💼 HR Analytics Dashboards
+### 🧑‍💼 HR Analytics Dashboards — `samples/`
 
 | File | Description |
 |------|-------------|
@@ -20,12 +20,20 @@ A curated set of professional **Excel dashboards** built with dark-themed stylin
 
 ---
 
-### 🧪 QA Engineering Dashboards
+### 🧪 QA Engineering Dashboards — `qa_dashboards/`
 
 | File | Description |
 |------|-------------|
 | `QA_Dashboard.xlsx` | Full Software QA tracking dashboard: bug tracker, test runs, tester scorecard, and sprint health |
 | `QA_Estimation_Template.xlsx` | **Reusable QA Resource & Budget Estimation Template** (see details below) |
+
+---
+
+### 📁 Project Management Dashboards — `pm_dashboards/`
+
+| File | Description |
+|------|-------------|
+| `Project Management Charts.xlsx` | PM tracking dashboard: project timelines, milestone tracking, resource allocation, and delivery KPIs |
 
 ---
 
@@ -105,11 +113,10 @@ All dashboards share a consistent dark theme:
 - **Excel 365** — for dynamic array functions where used
 - Python `openpyxl` ≥ 3.1 is used to generate/maintain the `.xlsx` files programmatically
 
-To regenerate `QA_Estimation_Template.xlsx`:
+To install the Python dependency:
 
 ```bash
 pip install openpyxl
-python build_estimation_dashboard.py
 ```
 
 ---
@@ -119,19 +126,23 @@ python build_estimation_dashboard.py
 ```
 excel_tutorial/
 ├── README.md
-├── build_estimation_dashboard.py       # Script to build QA_Estimation_Template.xlsx
+├── .gitignore
 │
-├── Excel_Dashboard_Tutorial.xlsx       # Tutorial / reference workbook
+├── samples/                            # HR Analytics dashboards
+│   ├── Excel_Dashboard_Tutorial.xlsx   # Tutorial / reference workbook
+│   ├── Dashboard1_HR_Overview.xlsx     # HR: Overview & KPIs
+│   ├── Dashboard2_Salary_Analysis.xlsx # HR: Salary analysis
+│   ├── Dashboard3_Demographics.xlsx    # HR: Workforce demographics
+│   ├── Dashboard4_JobTitle.xlsx        # HR: By job title
+│   ├── Dashboard5_Tenure.xlsx          # HR: Tenure & retention
+│   └── Dashboard6_Employee.xlsx        # HR: Employee explorer
 │
-├── Dashboard1_HR_Overview.xlsx         # HR: Overview & KPIs
-├── Dashboard2_Salary_Analysis.xlsx     # HR: Salary analysis
-├── Dashboard3_Demographics.xlsx        # HR: Workforce demographics
-├── Dashboard4_JobTitle.xlsx            # HR: By job title
-├── Dashboard5_Tenure.xlsx              # HR: Tenure & retention
-├── Dashboard6_Employee.xlsx            # HR: Employee explorer
+├── qa_dashboards/                      # QA Engineering dashboards
+│   ├── QA_Dashboard.xlsx               # QA: Bug tracker & sprint health
+│   └── QA_Estimation_Template.xlsx     # QA: Resource & budget estimation
 │
-├── QA_Dashboard.xlsx                   # QA: Bug tracker & sprint health
-└── QA_Estimation_Template.xlsx         # QA: Resource & budget estimation
+└── pm_dashboards/                      # Project Management dashboards
+    └── Project Management Charts.xlsx  # PM: Timelines, milestones & resources
 ```
 
 ---
